@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root :to => "venues#home"
   # testing rajul commit -- second time
+  # hayley making an edit this time
 
   
   # Max made his mark on this app
