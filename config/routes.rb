@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root :to => "venues#home"
+  # testing rajul commit
 
   # Routes for the Bookmark resource:
   # CREATE
