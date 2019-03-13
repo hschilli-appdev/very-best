@@ -3,9 +3,6 @@ Rails.application.routes.draw do
   # testing rajul commit -- second time
   # hayley making an edit this time
 
-  
-  # Max made his mark on this app
-
   # Routes for the Bookmark resource:
   # CREATE
   get "/bookmarks/new", :controller => "bookmarks", :action => "new"
