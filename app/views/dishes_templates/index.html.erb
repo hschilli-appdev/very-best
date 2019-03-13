@@ -83,7 +83,7 @@
         
         <th>The very best...</th>
         <th>is at...</th>
-        <th>test</th>
+        <th></th>
 
       </tr>
 
@@ -101,8 +101,13 @@
             </a>
           <% end %>
         </td>
-        
+
         <td>
+          <% if dish.cuisine.present? %>
+              <span class="badge badge-primary">
+              <%= dish.cuisine.name %>
+              </span>
+          <% end %>
         </td>
       </tr>
       <% end %>
