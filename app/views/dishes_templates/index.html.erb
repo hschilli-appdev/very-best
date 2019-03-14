@@ -87,8 +87,27 @@
 
       <% @dishes.each do |dish| %>
       <tr>
-        <td><%= dish.name %></td>
         <td>
+          <%= dish.name %>
+        </td>
+        <td>
+        <% if current_user.dishes.include?(dish) %>
+        
+          <% dish.bookmarks.each do |bookmark| %>
+          
+            <% if bookmark.user == current_user %>
+        
+              <div>
+                <a href="/venues/<%= bookmark.venue_id %>"><%= Venue.find(bookmark.venue_id).name %></a>
+              </div>
+              
+            <% else %>
+            
+            <% end %>
+        
+          <% end %>
+        
+        <% else %>
           <form action="/create_bookmark" method="post">
             <div class="form-group">
 
@@ -113,6 +132,8 @@
             Like
           </button>
         </form>
+        <% end %>
+        
         </td>
         <td>
           <% if dish.cuisine.present? %>
