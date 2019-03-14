@@ -85,10 +85,6 @@
         <th>The very best...</th>
         <th>is at...</th>
         <th></th>
-        
-        <th>The very best...</th>
-        <th>is at...</th>
-        <th></th>
 
       </tr>
 
@@ -142,13 +138,6 @@
           </button>
         </form>
         <% end %>
-        </td>
-        <td>
-          <% if dish.cuisine.present? %>
-            <a href="/cuisines/<%= dish.cuisine.id %>">
-              <%= dish.cuisine.name %>
-            </a>
-          <% end %>
         </td>
         <td class="text-right">
           <% if dish.cuisine.present? %>
