@@ -10,6 +10,7 @@ class DishesController < ApplicationController
     @bookmark = Bookmark.new
     @dish = Dish.find(params.fetch("id"))
 
+
     render("dishes_templates/show.html.erb")
   end
 
