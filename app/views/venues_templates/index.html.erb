@@ -91,7 +91,9 @@
       <div id="location_map" style="height: 360px; position: relative; overflow: hidden;"></div>
       </ul>
 
-      <% @venues.each do |venue| %>
+      <% bookmarked_venues = current_user.bookmarked_venues %>
+
+      <% bookmarked_venues.each do |venue| %>
       <ul class="list-group list-group-flush">
         <table class="table">
           <tr>
